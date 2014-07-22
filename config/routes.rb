@@ -1,4 +1,6 @@
 Perkify::Application.routes.draw do
+  resources :perks
+
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
