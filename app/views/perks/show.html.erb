@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @perk.description %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @perk.product %>
+</p>
+
+<%= link_to 'Edit', edit_perk_path(@perk) %> |
+<%= link_to 'Back', perks_path %>
