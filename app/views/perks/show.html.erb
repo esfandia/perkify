@@ -7,7 +7,7 @@
 
 <p>
   <strong>Product:</strong>
-  <%= @perk.product %>
+  <%= link_to @perk.product.name, @perk.product %>
 </p>
 
 <%= link_to 'Edit', edit_perk_path(@perk) %> |

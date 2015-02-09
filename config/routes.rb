@@ -1,7 +1,19 @@
 Perkify::Application.routes.draw do
-  resources :perks
 
-  resources :products
+  # get "product_perks/new"
+  # get "product_perks/create"
+  # get "product_perks/index"
+  
+  # resources :products do
+  #   resources :perks, shallow: true
+  # end
+  
+  resources :products do
+    resources :perks, only: [:index, :new, :create], controller: 'product_perks'
+  end
+  
+  # could make it shallower, but for now all is possible
+  resources :perks 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

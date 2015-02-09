@@ -1,10 +1,9 @@
-<h1>Listing perks</h1>
+<h1>Listing perks for <%= link_to @product.name, @product %></h1>
 
 <table>
   <thead>
     <tr>
       <th>Description</th>
-      <th>Product</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,7 +14,6 @@
     <% @perks.each do |perk| %>
       <tr>
         <td><%= perk.description %></td>
-        <td><%= link_to perk.product.name, perk.product %></td>
         <td><%= link_to 'Show', perk %></td>
         <td><%= link_to 'Edit', edit_perk_path(perk) %></td>
         <td><%= link_to 'Destroy', perk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Perk', new_perk_path %>
+<%= link_to 'New Perk', new_product_perk_path %>
