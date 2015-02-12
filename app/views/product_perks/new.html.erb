@@ -1,5 +1,4 @@
 <h1>New perk for <%= link_to @product.name, @product %></h1>
-<%= debug @perk%>
 <%= form_for [@product, @product.perks.build] do |f| %>
   <% if @perk.errors.any? %>
     <div id="error_explanation">
